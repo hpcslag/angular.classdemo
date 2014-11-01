@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+</head>
+<body  ng-controller="ctrl">
+	<div>
+		<select ng-model="selecton" ng-options="it.it for it in item">
+			<option value="">Please Select</option>
+		</select>
+	</div>
+
+		<div ng-switch="selecton.it">
+		<!--進入選擇器-->
+			<div ng-switch-when="ONE">IS ONE</div>
+			<!--如果ng-switch-when 得到selecton是one-->
+			<div ng-switch-when="TWO">IS TWO</div>
+			<!--同上-->
+			<div ng-switch-default>IS THREE</div>
+			<!--如果默認-->
+		</div>
+<!--Import Main Class angular.js-->
+<script src="../angular.min.js"></script>
+<!--Import Class script.js-->
+<script src="script.js"></script>
+</body>
+</html>

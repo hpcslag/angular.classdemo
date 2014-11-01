@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+</head>
+<body>
+	<div ng-controller="ctrl">
+		<select ng-model="selecton" ng-options="it.it for it in item">
+		<!--透過ng-options取得array內容: 變數A.內容 for 變數A in 主陣列名稱-->
+			<option value="">Please Select</option>
+		</select>
+		<p>{{selecton.it}}</p>
+		<!--取得object的值-->
+	</div>
+<!--Import Main Class angular.js-->
+<script src="../angular.min.js"></script>
+<!--Import Class script.js-->
+<script src="script.js"></script>
+</body>
+</html>
