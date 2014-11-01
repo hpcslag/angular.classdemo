@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+</head>
+<body ng-controller="ctrl">
+	enter something you need watch: <input type="chechbox" ng-model="test"/><br>
+	$watch: {{test || 0 }}
+	<br>//you need see in console(F12)
+	<!--$watch 用來提供新值和舊值的改變，詳情請看script-->
+<!--Import Main Class angular.js-->
+<script src="../angular.min.js"></script>
+<!--Import Class script.js-->
+<script src="script.js"></script>
+</body>
+</html>

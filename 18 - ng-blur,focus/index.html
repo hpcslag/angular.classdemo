@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+	<style type="text/css">
+		input[type="text"].Focus {
+				background: black;
+			}
+		input[type="text"].Blur {
+				background: green;
+			}
+	</style>
+</head>
+<body>
+	<div ng-app ng-init="focus=false;blur=false;active=false">
+    	<input type="text"  ng-class="{ Focus: focus, Blur: blur }"
+    						ng-focus="focus=true;blur=false;active=true;"
+    						ng-blur="blur=true;focus=false;active=false;"
+    	/>
+    	<!--設定 focus焦點的時候，做什麼動作, 設定Blur失焦的時候，做什麼動作-->
+    	<p>active: {{active}}</p>
+   	</div>
+<!--Import Main Class angular.js-->
+<script src="../angular.min.js"></script>
+</body>
+</html>
