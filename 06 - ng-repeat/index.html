@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+</head>
+<body>
+	<div ng-controller="ctrl">
+		<p ng-repeat="name in names"> name list:{{$index+1}}. {{name}}</p>
+		<!--ng-repeat 能用for each的方式取得陣列中的資料, $index+1 可以設定變數後，每次相加 -->
+		<p>一共有 {{name.length}}筆資料</p>
+		<ul>
+     		<li ng-init="aa"ng-repeat="profile in profiles">{{profile.sex +'  old:'+ profile.old}} </li>
+    	</ul>
+    	<p>以上有{{profile.length}}筆資料</p>
+    	<!--取得陣列中json格式的資料-->
+
+    	<!--repeat詳情參閱:
+    	http://docs.angularjs.org/api/ng.directive:ngRepeat
+
+		$index –{number} –取出陣列中的index。(從0開始)
+		$first –{boolean} –如果是第一個項目，就傳回true、否則為false。
+		$middle –{boolean} –如果不是第一個和最後一個項目，就傳回true、否則為false。
+		$last –{boolean} –如果是最後一個項目，就傳回true、否則為false。
+		-->
+
+	</div>
+<!--Import Main Class angular.js-->
+<script src="angular.min.js"></script>
+<!--Import Class script.js-->
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+</head>
+<body>
+  <div ng-app="">
+  <!--input事件的屬性:
+	name 名稱
+	ng-model 綁定的資料
+	required 限制是否必填
+	ng-required 限制是否必填
+	ng-minlength 限制最小長度
+	ng-maxlength 限制最大長度
+	ng-pattern 限制RegExp格式
+	ng-change 當input的值發生變化的時候執行
+
+	input 的類型:
+	type="checkbox"
+	type="email"
+	type="number"
+	type="radio"
+	type="text"
+	type="url"
+
+	checkbox用法:
+	1. ng-controller，處理Model和View的雙向連結
+	2. ng-model，綁定checkbox的資料和value1的值，一有變動，就會隨時更新。
+	3. 可以透過ng-true-value和ng-false-value，修改value2的內容。
+  -->
+  	<form name="foo" ng-controller="ctrl">
+  		Value01: <input type="checkbox" ng-model="value01" />
+  		<br>
+  		Value02: <input type="checkbox" ng-model="value02" ng-true-value="yes" ng-false-value="NO" />
+  		<br>
+  		<tt>value01: {{value01}}</tt><br>
+  		<tt>value02: {{value02}}</tt>
+  	</form>
+  </div>
+<!--radio 詳情參閱:https://docs.angularjs.org/api/ng/input/input%5Bradio%5D-->
+<!--Import Main Class angular.js-->
+<script src="angular.min.js"></script>
+<!--Import Class script.js-->
+<script src="script.js"></script>
+</body>
+</html>

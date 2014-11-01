@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html>
 <head>
 	<meta charset="utf-8">
 	<title>Demo</title>
@@ -9,8 +9,10 @@
 		Click: <input type="checkbox" ng-model="checked" />
 		<br>
 		Show: <span ng-show="checked">Checked!</span>
+		<!--如果check被觸發，才show-->
 		<br>
 		Hide: <span ng-hide="checked">Hide, Please check!</span> 
+		<!--如果沒被觸發，就使用hide這行-->
 	</div>
 <!--Import Main Class angular.js-->
 <script src="angular.min.js"></script>

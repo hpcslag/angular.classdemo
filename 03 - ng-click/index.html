@@ -5,10 +5,10 @@
 	<title>Demo</title>
 </head>
 <body>
-<div ng-controller="ctrl">
+<div ng-controller="ctrl"><!--設定controller的function名稱-->
 	<p>Price: {{price || 0}}</p>
-	<input type="text" ng-model="price" />
-	<input type="button" ng-click="action()" value="click" />
+	<input type="text" ng-model="price" /><!--設定控制的變數-->
+	<input type="button" ng-click="action()" value="click" /><!--設定ng-click後觸發哪個scope的function,-->
 
 </div>
 <!--Import Main Class angular.js-->
