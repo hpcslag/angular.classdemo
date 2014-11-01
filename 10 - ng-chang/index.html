@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+</head>
+<body>
+	<div ng-controller="ctrl">
+		<input type="checkbox" ng-model="word" ng-change="change()" />
+		<!--用了change, 每次呼叫都會改變-->
+		<br />
+		checkbox? {{word}} <br />
+		calc? {{conq}}
+	</div>
+<!--Import Main Class angular.js-->
+<script src="../angular.min.js"></script>
+<!--Import Class script.js-->
+<script src="script.js"></script>
+</body>
+</html>

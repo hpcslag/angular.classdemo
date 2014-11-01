@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+</head>
+<body ng-app="" ng-controller="ctrl">
+	<a href="{{url}}">Search</a><br >
+	<!--這樣如果anguler.js位載入成功會掛掉，所以要用下面的方法-->
+	<a ng-href="https://www.google.com.tw/search?q={{name}}">Search</a>
+	<!--ng-href 再載入{{name}} 比較安全-->
+<!--Import Main Class angular.js-->
+<script src="../angular.min.js"></script>
+<!--Import Class script.js-->
+<script src="script.js"></script>
+</body>
+</html>

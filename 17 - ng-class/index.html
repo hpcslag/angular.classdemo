@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+	<style type="text/css">
+	.active{
+		color:blue;
+	}
+	.unactive{
+		color:green;
+	}
+	</style>
+</head>
+<body ng-controller="ctrl">
+	<!--如果我們要使用angular在html中設定css樣式，可以使用ng-class-->
+	<p ng-class="{true: 'active',false: 'unactive'}[active]">Foobar</p>
+
+	to blue? <input type="checkbox" ng-model="active" />
+	<!--參考: http://docs.angularjs.org/api/ng.directive:ngClass -->
+
+<!--Import Main Class angular.js-->
+<script src="../angular.min.js"></script>
+<!--Import Class script.js-->
+<script src="script.js"></script>
+</body>
+</html>

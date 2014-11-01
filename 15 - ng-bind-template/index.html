@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+</head>
+<body ng-init="name='dels'">
+	ng-bind-template: <pre ng-bind-template="{{name}}"></pre>
+	<!--html會先被render才會載入js and other (angular.js), template 可以多個model綁定-->
+<br />
+	ng-bind: <pre ng-bind="name"></pre>
+	<!--只能綁定一個項目-->
+
+	ng-cloak: <pre bg-cloak>{{name}}</pre>
+	<!--只在開始的時候載入處理，無法處理model資料對應不同事件需要變更值的狀況。
+		，需要另外加入css，用來解決跨瀏覽器的問題。-->
+		
+<!--Import Main Class angular.js-->
+<script src="../angular.min.js"></script>
+<!--Import Class script.js-->
+<script src="script.js"></script>
+</body>
+</html>

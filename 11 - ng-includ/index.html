@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<!--選擇 script app module-->
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+</head>
+<body ng-controller="ctrl">
+	<div >
+		<select ng-model="template" ng-options="list.name for list in templates">
+			<option value="">default</option>
+		</select>
+		<div ng-include="template.url"></div>
+		<!--找到對應的檔案匯入進來,無法在file路徑使用，要用localhost-->
+
+	</div>
+
+<!--Import Main Class angular.js-->
+<script src="../angular.min.js"></script>
+<!--Import Class script.js-->
+<script src="script.js"></script>
+</body>
+</html>

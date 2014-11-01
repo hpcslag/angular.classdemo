@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="app"><!--找到指定的angular模組-->
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+</head>
+<body>
+
+<div id="container" ng-controller="ctrl">
+      <p>使用ng-bind-html-unsafe：</p>
+      <div ng-bind-html-unsafe="html"></div>
+      <!--是用來處理html 用的，但是Js需要改寫，要用 module 去寫-->
+      ng-bind:
+      <pre ng-bind="html"></pre>
+      <!--掛了-->
+      <p>使用ng-bind-html：</p>
+      <div ng-bind-html="html"></div>
+      <!--ng-bin-html 是用來處理 html 用的，使用ng-bind-html需要載入ngSanitize模組-->
+    </div>
+    <br>
+    USE HTML: <input ng-model="name">
+	<br>
+	SHOW HTML：<span ng-bind-html="name"></span>
+
+<!--AngularJS 1.2之後的版本，ng-bind-html已經取代了ng-bind-html-unsafe-->
+
+<!--Import Main Class angular.js-->
+<script src="../angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular-sanitize.js"></script>
+<!--Import Class script.js-->
+<script src="script.js"></script>
+</body>
+</html>

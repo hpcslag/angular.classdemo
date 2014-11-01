@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+</head>
+<body>
+	All Check? <input type="checkbox" ng-model="all"/>
+	<!--宣告model的名稱-->
+	<br>
+	one? <input type="checkbox" ng-checked="all"> <br>
+	<!--使用 ng-checked就能同步該名稱的check項目!-->
+	two? <input type="checkbox" ng-checked="all"> <br>
+	<!--同上-->
+	three? <input type="checkbox" ng-checked="all"> <br>
+	<!--同上-->
+	four? <input type="checkbox" ng-checked="all"><br>
+	<!--同上-->
+	
+<!--Import Main Class angular.js-->
+<script src="../angular.min.js"></script>
+<!--Import Class script.js-->
+<script src="script.js"></script>
+</body>
+</html>
