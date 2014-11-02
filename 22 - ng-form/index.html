@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+</head>
+<body ng-controller="ctrl">
+	<form name="foo" ng-submit="submit()">
+		<ng-form ng-repeat="key in keys">
+		<!--ng-form允許有巢狀表單(nest forms)，就是在表單內再增加一個或多個form-->
+			name: <input type="text" name="username" ng-model="key.name" required>
+			age:  <input type="text" name="age" ng-model="key.age" required>
+			<br />
+		</ng-form>
+		<input type="submit" value="new" ng-click="add()" />
+		<input type="submit" value="save" />
+	</form>
+	{{keys}}
+
+<!--Import Main Class angular.js-->
+<script src="../angular.min.js"></script>
+<!--Import Class script.js-->
+<script src="script.js"></script>
+</body>
+</html>

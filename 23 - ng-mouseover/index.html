@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+</head>
+<body ng-controller="ctrl">
+	<p ng-show="mouse">Mouse Over Img</p>
+	<!--只有觸發true才顯示內容-->
+	<img ng-mouseover="mouse=true" ng-mouseleave="mouse=false" ng-src="http://angularjs.org/img/AngularJS-large.png" alt="" />
+	<!--ng-mouseover 和 ng-mouseleave 可以在滑鼠放上、離開時分別執行什麼事情!-->
+
+<!--Import Main Class angular.js-->
+<script src="../angular.min.js"></script>
+<!--Import Class script.js-->
+<script src="script.js"></script>
+</body>
+</html>

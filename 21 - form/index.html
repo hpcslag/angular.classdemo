@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+</head>
+<body ng-controller="ctrl">
+	<form name="foo" ng-sublime="save()">
+	<!--設定ng-sublime 觸發後啟動save指令 -->
+	Enter Username: <input ng-model="user.name" name="username" placeholder="name" required/>
+	<span ng-show="!foo.username.$valid">不能為空白</span>
+    <pre>foo.username.$valid : {{foo.username.$valid}}</pre>
+    <!--$vaild可以觀察是否有錯誤!-->
+    User e-mail：<input ng-model="user.email" name="useremail" type="email" placeholder="example@example.com"/>
+        <span ng-show="!foo.useremail.$valid">Fail</span>
+        <span ng-show="foo.useremail.$error.required">You Need Enter something</span>
+        <span ng-show="foo.useremail.$error.email">email format fail</span>
+    <br>
+    <br>
+    <input type="button" value="save" ng-disabled="foo.$invalid">
+    <!--全部輸入正確才能夠使用-->
+	</form>
+
+<!--Import Main Class angular.js-->
+<script src="../angular.min.js"></script>
+<!--Import Class script.js-->
+<script src="script.js"></script>
+</body>
+</html>

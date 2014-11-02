@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app" ng-controller="ctrl">
 <head>
 	<meta charset="utf-8">
 	<title>Demo</title>
 </head>
 <body>
+
+<!--使用自己的ng 
+	directive
+	 - 可以自訂html元素
+-->
+<p ng-look="look">{{name}}</p>
 
 <!--Import Main Class angular.js-->
 <script src="../angular.min.js"></script>

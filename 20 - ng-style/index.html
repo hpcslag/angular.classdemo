@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+</head>
+<body ng-controller="ctrl">
+	<p ng-style="changecolor()">Hello Guy!</p>
+	<!--ng-style 可以由script.js 取得一個style的物件, { color: "red" }-->
+
+	<p ng-style="style">Foobar</span><br>
+	<input type="button" value="set" ng-click="style={color:'green'}">
+	<br	/>
+	<input type="button" value="undo" ng-click="style={}">
+<!--Import Main Class angular.js-->
+<script src="../angular.min.js"></script>
+<!--Import Class script.js-->
+<script src="script.js"></script>
+</body>
+</html>

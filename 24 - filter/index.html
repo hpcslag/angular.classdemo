@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+</head>
+<body ng-controller="ctrl">
+<!--filter資料過濾項目表:
+	currency 加入貨幣符號
+	date 可以將 Date 物件轉成指定格式的日期字串
+	filter 可以篩選陣列中的內容
+	json 可以將javascriop物件轉成json字串
+	limitTo 可以限制陣列或字串裡面的字元個數
+	number 可以為數值或指定小數以下位數
+	lowercase 可以將英文字串轉成英文小寫
+	uppercase 可以將英文字串轉成英文大寫
+	orderBy 可以將資料作排序
+
+	基本用法: {{expression | filter }}
+-->
+<!--貨幣格式-->
+<input type="number" ng-model="money" /><br />
+default $$ : {{money | currency}} <br />
+Custom $$(NTD) : {{money | currency:"NTD$"}}<br /><br />
+
+<!--日期格式-->
+<input type="date" ng-model="dates" /><br />
+<pre>{{dates | date}} <br />
+{{dates | date:'yyyy - MM - dd'}} <br />
+{{1255131513112 | date:'medium'}}
+</pre>
+
+<!--JSON Format-->
+<pre>{{ obj | json }}</pre><br /><br />
+
+<!--limitTo-->
+<pre> 
+  Limit {{numbers}} to: <input type="integer" ng-model="numLimit">
+  <p>Output numbers: {{ numbers | limitTo:numLimit }}</p>
+  Limit {{letters}} to: <input type="integer" ng-model="letterLimit">
+  <p>Output letters: {{ letters | limitTo:letterLimit }}</p>
+</pre><br /><br />
+
+<!--數字格式-->
+<input type="number" ng-model="num">
+<pre >{{ num | number }}</pre >
+<pre >{{ num | number:5 }}</pre >
+
+<!--tolowercase-->
+<input type="text" ng-model="lower">
+<pre >{{ lower | lowercase }}</pre >
+
+<!--uppercase-->
+<input type="text" ng-model="upper">
+<pre >{{ upper | uppercase }}</pre >
+<!--更多參考:
+http://jsfiddle.net/colvint/tyx3m/
+http://weisnote.blogspot.tw/2013/06/angularjs-ngrepeat-filter.html
+http://www.cnblogs.com/whitewolf/archive/2012/10/31/2748920.html
+http://dictmoom.f2e.me/2013/07/angularjs-start(4)/
+http://abgne.tw/angularjs/angularjs-getting-stared/filters-2.html
+http://docs.angularjs.org/guide/dev_guide.templates.filters
+http://jsfiddle.net/pkozlowski_opensource/Nk8qy/2/
+-->
+<!--Import Main Class angular.js-->
+<script src="../angular.min.js"></script>
+<!--Import Class script.js-->
+<script src="script.js"></script>
+</body>
+</html>
