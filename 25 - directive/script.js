@@ -7,7 +7,7 @@ app.controller('ctrl',function ctrl($scope){
 
 //建立一個名稱為ngLook的directive
 app.directive('ngLook',function(){
-//ngLook 大寫了話才能夠在屬性使用 ng-look, 如果沒有大寫，會變成 nglook=""
+//ngLook 兩個字詞後者大寫了話才能夠在屬性使用 ng-look, 如果後者沒有大寫，會變成 nglook=""
 	return {
 		replace: true,
 		restrict: 'A',
